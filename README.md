@@ -1,6 +1,29 @@
 # AI Employees — Virtual 3D Office
 
-> Status: skeleton, 2026-11-25. First system: **Sales & Marketing**.
+> Status: **F1 selesai** (2026-11-25) — shell 3D + avatar VRM + idle animasi + greeting bilingual.
+> First system: **Sales & Marketing**.
+
+## Jalan yang dipakai (keputusan 2026-11-25)
+
+- Karakter: **VRM** (avatar `public/models/avatar_sample.vrm`, CC0 sample dari pixiv/three-vrm)
+- LLM: **cloud free tier** (OpenRouter) — menyusul di F2
+- Bahasa: **bilingual ID/EN**
+
+## Cara jalan
+
+```bash
+cd app
+npm install
+npm run dev      # http://localhost:3000
+npm run build && npm run start -- -p 3100
+```
+
+## Yang sudah ada di F1
+
+- `src/app/page.tsx` — Canvas + HUD
+- `src/components/office/OfficeScene.tsx` — ruang kantor, meja, kursi, tanaman, lighting
+- `src/components/office/EmployeeAvatar.tsx` — loader VRM, idle (breathing/head sway),
+  wave + bubble greeting bilingual saat avatar diklik, label nama via drei `Html`
 
 ## Tujuan
 
